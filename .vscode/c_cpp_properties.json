@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/ubuntu/microros_ws/install/micro_ros_agent/include/**",
+        "/home/ubuntu/microros_ws/install/micro_ros_msgs/include/**",
+        "/home/ubuntu/microros_ws/install/builtin_interfaces/include/**",
+        "/home/ubuntu/robot_ws/install/my_robot_localization/include/**",
+        "/home/ubuntu/robot_ws/install/my_robot_firmware/include/**",
+        "/home/ubuntu/robot_ws/install/my_robot_controller/include/**",
+        "/opt/ros/jazzy/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ros2",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++17"
+    }
+  ],
+  "version": 4
+}

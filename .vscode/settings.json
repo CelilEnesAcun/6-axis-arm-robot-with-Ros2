@@ -1,0 +1,26 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/ubuntu/lidar_ws/install/pi5_prog/lib/python3.12/site-packages",
+        "/home/ubuntu/lidar_ws/install/lidar_maps/lib/python3.12/site-packages",
+        "/home/ubuntu/motor_ws/install/joystick/lib/python3.12/site-packages",
+        "/home/ubuntu/microros_ws/install/micro_ros_msgs/lib/python3.12/site-packages",
+        "/home/ubuntu/microros_ws/install/builtin_interfaces/lib/python3.12/site-packages",
+        "/home/ubuntu/robot_ws/install/py_pkg/lib/python3.12/site-packages",
+        "/home/ubuntu/robot_ws/install/my_robot_firmware/lib/python3.12/site-packages",
+        "/home/ubuntu/robot_ws/install/my_robot_controller/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/ubuntu/lidar_ws/install/pi5_prog/lib/python3.12/site-packages",
+        "/home/ubuntu/lidar_ws/install/lidar_maps/lib/python3.12/site-packages",
+        "/home/ubuntu/motor_ws/install/joystick/lib/python3.12/site-packages",
+        "/home/ubuntu/microros_ws/install/micro_ros_msgs/lib/python3.12/site-packages",
+        "/home/ubuntu/microros_ws/install/builtin_interfaces/lib/python3.12/site-packages",
+        "/home/ubuntu/robot_ws/install/py_pkg/lib/python3.12/site-packages",
+        "/home/ubuntu/robot_ws/install/my_robot_firmware/lib/python3.12/site-packages",
+        "/home/ubuntu/robot_ws/install/my_robot_controller/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "ROS2.distro": "jazzy",
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true
+}
