@@ -18,7 +18,7 @@
             <geometry>
                 <mesh filename="package://arm_robot_description/meshes/2.parca.STL"/>
             </geometry>
-            <origin rpy="1.57 0 3.14" xyz="0 0 0"/>
+            <origin rpy="0 0 1.57" xyz="0 0 0"/>
             <material name="blue"/>
         </visual>
     </link>
