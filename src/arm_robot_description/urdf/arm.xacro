@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <link name="1.parca">
+        <visual>
+            <geometry>
+                <mesh filename="package://arm_robot_description/meshes/1.parca.STL"/>
+            </geometry>
+            <origin rpy="1.57 0 0" xyz="0 0 0"/>
+            <material name="grey" />
+        </visual>
+
+    </link>
+
+    <link name="2.parca">
+        <visual>
+            <geometry>
+                <mesh filename="package://arm_robot_description/meshes/2.parca.STL"/>
+            </geometry>
+            <origin rpy="0 0 1.57" xyz="0 0 0"/>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <link name="3.parca">
+        <visual>
+            <geometry>
+                <mesh filename="package://arm_robot_description/meshes/3.parca.STL"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <material name="yellow"/>
+        </visual>
+    </link>
+
+    <link name="4.parca">
+        <visual>
+            <geometry>
+                <mesh filename="package://arm_robot_description/meshes/4.parca.STL"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <material name="red"/>
+        </visual>
+    </link>
+
+    <link name="5.parca">
+        <visual>
+            <geometry>
+                <mesh filename="package://arm_robot_description/meshes/5.parca.STL"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <material name="orange"/>
+        </visual>
+    </link>
+
+    <link name="6.parca">
+        <visual>
+            <geometry>
+                <mesh filename="package://arm_robot_description/meshes/6.parca.STL"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <material name="green"/>
+        </visual>
+    </link>   
+
+    <link name="7.parca">
+        <visual>
+            <geometry>
+                <mesh filename="package://arm_robot_description/meshes/7.parca.STL"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <material name="yellow"/>
+        </visual>
+    </link> 
+
+    <joint name="joint1" type="revolute">
+        <parent link="1.parca"/>
+        <child link="2.parca"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <origin xyz="0.0 0.0 0.105" rpy="0.0 0.0 0.0"/>
+        <limit lower="-3.14" upper="3.14" effort="10.0" velocity="1.0"/>
+    </joint>
+
+    <joint name="joint2" type="revolute">
+        <parent link="2.parca"/>
+        <child link="3.parca"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <origin xyz="0.0 0.0 0.04" rpy="1.57 0 1.57"/>
+        <limit lower="-3.14" upper="3.14" effort="10.0" velocity="1.0"/>
+    </joint>
+
+    <joint name="joint3" type="revolute">
+        <parent link="3.parca"/>
+        <child link="4.parca"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <origin xyz="0.180 0.0 0.0" rpy="0 0 1.57"/>
+        <limit lower="-3.14" upper="3.14" effort="10.0" velocity="1.0"/>
+    </joint>
+
+    <joint name="joint4" type="revolute">
+        <parent link="4.parca"/>
+        <child link="5.parca"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <origin xyz="0.0 -0.260 0.0" rpy="1.57 0 0"/>
+        <limit lower="-3.14" upper="3.14" effort="10.0" velocity="1.0"/>
+    </joint>
+
+    <joint name="joint5" type="revolute">
+        <parent link="5.parca"/>
+        <child link="6.parca"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <origin xyz="0.0 0.0 0.065" rpy="1.57 0 0"/>
+        <limit lower="-3.14" upper="3.14" effort="10.0" velocity="1.0"/>
+    </joint>
+
+    <joint name="joint6" type="revolute">
+        <parent link="6.parca"/>
+        <child link="7.parca"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <origin xyz="0.0 0.03 0.0" rpy="-1.57 0 0"/>
+        <limit lower="-3.14" upper="3.14" effort="10.0" velocity="1.0"/>
+    </joint>
+
+</robot>
