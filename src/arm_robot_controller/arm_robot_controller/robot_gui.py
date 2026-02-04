@@ -19,7 +19,6 @@ class RobotControlNode(Node):
         msg = JointState()
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.name = ['joint1', 'joint2', 'joint3', 'joint4', 'joint5', 'joint6']
-        # Derece -> Radyan dönüşümü burada yapılıyor
         msg.position = [mt.radians(a) for a in angles_deg]
         self.publisher_.publish(msg)
 
@@ -43,12 +42,9 @@ class RobotKinematicsApp:
         self.right_frame = tk.Frame(main_frame, relief="groove", borderwidth=2)
         self.right_frame.pack(side="right", fill="both", expand=True, padx=10)
 
-        # ==========================================
-        # SOL TARAF: İLERİ KİNEMATİK (FK)
-        # ==========================================
+
+        # İLERİ KİNEMATİK (FK)
         tk.Label(self.left_frame, text="İleri Kinematik & Kontrol", font=("Arial", 14, "bold")).pack(pady=10)
-        
-        # 1. Açılar (Inputs)
         tk.Label(self.left_frame, text="Açılar (Derece)", font=("Arial", 11, "bold")).pack()
         
         self.fk_entries = []
@@ -114,11 +110,9 @@ class RobotKinematicsApp:
                 count += 1
             self.ik_rot_entries.append(row_entries)
 
-        # 3. Hesapla Butonu
         btn_calc_ik = tk.Button(self.right_frame, text="TERS KİNEMATİĞİ HESAPLA & GİT", command=self.calculate_ik, bg="#2196F3", fg="white")
         btn_calc_ik.pack(pady=15, ipadx=10)
 
-        # 4. Sonuçlar (Açılar)
         tk.Label(self.right_frame, text="Bulunan Açılar", font=("Arial", 11, "bold")).pack()
         ik_result_frame = tk.Frame(self.right_frame)
         ik_result_frame.pack(pady=10)
@@ -134,7 +128,7 @@ class RobotKinematicsApp:
 
     def calculate_fk(self):
         try:
-            # Arayüzden açıları al
+
             joints = [float(entry.get()) for entry in self.fk_entries]
             self.ros_node.publish_joints(joints)
             # İleri kinematik 
@@ -208,7 +202,6 @@ class RobotKinematicsApp:
 
     def calculate_ik(self):
         try:
-            # 1. Girdileri Al (Arayüzden)
             pxs = float(self.ik_pos_entries["Px"].get())
             pys = float(self.ik_pos_entries["Py"].get())
             pzs = float(self.ik_pos_entries["Pz"].get())
